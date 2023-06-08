@@ -70,7 +70,7 @@ can.frequency(250000);
         if(flag_fusion==1) {
             time=time+1;
             DOF6.readAccel();
-            //DOF6.readGyro();
+            DOF6.readGyro();
             //DOF6.readTemp();
             sprintf(ligne,"$%f %f %f; ",DOF6.ax,DOF6.ay,DOF6.az);
             pc.write(ligne,strlen(ligne));
